@@ -1,9 +1,5 @@
-import About from "../About/About";
-import Youtube from "../Youtube/Youtube";
-import { Route, Routes, Link } from "react-router-dom";
-import Login from "../Login/login.connect";
-import RegisterBug from "../RegisterBug/RegisterBug.connect";
-import Register from "../Register/Register.connect";
+import { Link } from "react-router-dom";
+import LocalRoutes from "./Routes";
 export default function AppRoutes() {
   return (
     <div>
@@ -24,13 +20,7 @@ export default function AppRoutes() {
           <Link to="/registerbug">Register a bug</Link>
         </p>
       </nav>
-      <Routes>
-        <Route path="/youtube" element={<Youtube />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/registerbug" element={<RegisterBug />} />
-      </Routes>
+      {<LocalRoutes />}
     </div>
   );
 }
